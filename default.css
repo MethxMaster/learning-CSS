@@ -1,0 +1,20 @@
+.center-element{
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+  }
+  .header{
+    background-color: black;
+    border:20px solid black;
+  }
+  .footer{
+    background-color: black;
+    border:20px solid black;
+  }
+.exam-code{
+    border:1px dashed yellow;
+}
+.bgcode{
+    background-color: #171615;
+    color: white
+}
