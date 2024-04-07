@@ -1,8 +1,12 @@
+
+
 .center-element{
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
-  }
+}
+
+
   .header{
     background-color: black;
     border:20px solid black;
