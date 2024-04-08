@@ -24,3 +24,9 @@ p.error{
 p.success{
     color : green ;
 }
+p#name{
+    color : greenyellow ;
+}
+p#username{
+    color : orange ;
+}

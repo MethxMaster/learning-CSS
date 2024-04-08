@@ -84,6 +84,15 @@
     </code>
 </pre>
                         </li>
+                        <li><b>Universal selector</b> is define style for <mark>all HTML tags</mark>.
+<pre style="background-color: bisque;">
+    <code>
+        <b>*</b>{
+            declaration
+        }
+    </code>
+</pre>
+                        </li>
                     </ul>
                 </p>
 
@@ -112,11 +121,13 @@
         <section class="bgcode">
             <h3>Example</h3>
 
+            <!--1. Tag selector-->
             <article>   
                 <div class="container">
                     <div class="row">
                     &nbsp;
                     </div>
+                
                     <div class="row">
                         <pre><code><strong><h3>1. Tag selector</h3></strong></code></pre>
                     </div>
@@ -155,6 +166,7 @@
                 </div>
             </article>
 
+            <!--2. Class selector-->
             <article>   
                 <div class="container">
                     <div class="row">
@@ -200,6 +212,7 @@
                 </div>
             </article>
 
+            <!--3. ID selector-->
             <article>   
                 <div class="container">
                     <div class="row">
@@ -245,6 +258,7 @@
                 </div>
             </article>
 
+            <!--4. Union selector-->
             <article>   
                 <div class="container">
                     <div class="row">
@@ -293,7 +307,8 @@
                     </div>
                 </div>
             </article>
-
+            
+            <!--5. Tag.Class selector-->
             <article>   
                 <div class="container">
                     <div class="row">
@@ -342,6 +357,84 @@
                 </div>
             </article>
 
+            <!--6. Tag#ID selector-->
+            <article>   
+                <div class="container">
+                    <div class="row">
+                    &nbsp;
+                    </div>
+                    <div class="row">
+                        <pre><code><strong><h3>6. Tag#ID selector</h3></strong></code></pre>
+                    </div>
+                    <div class="row">
+                        <div class="col" style>
+<pre>
+<code>
+    <div class="exam-code">
+        <u>HTML</u>
+            &lt;<span style="color:orchid;">p id="name"</span>&gt;MethxMaster&lt;/p&gt;
+            &lt;<span style="color:orchid;">p id="username"</span>&gt;developer01&lt;/p&gt;
+    </div>
+    <div class="exam-code">
+        <u>CSS</u>
+            <span style="color:orchid;">p#name</span>{
+                <span style="color:orange;">color</span> : <span style="color:greenyellow;">greenyellow</span> ;
+            }
+            <span style="color:orchid;">p#username</span>{
+                <span style="color:orange;">color</span> : <span style="color:greenyellow;">orange</span> ;
+            }
+    </div>
+</code>
+</pre>
+                        </div>
+                        <div class="col">
+<pre>
+<code>
+    <div class="exam-code">
+        <u>Output</u>
+        <div style="background-color: rgb(58, 58, 58);">
+            <div id="box">
+                <p id="name">MethxMaster</p>
+                <p id="username">developer01</p>
+            </div>
+        </div>
+    </div>
+</code>
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!--7. Universal selector-->
+            <article>   
+                <div class="container">
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <pre><code><strong><h3>7. Universal selector</h3></strong></code></pre>
+                    </div>
+                    <div class="row">
+
+<pre>
+<code>
+    <div class="exam-code">
+        <u>CSS</u>
+            <span style="color:orchid;">*</span>{
+                <span style="color:orange;">color</span> : <span style="color:greenyellow;">greenyellow</span> ;
+                <span style="color:orange;">font-style</span> : <span style="color:greenyellow;">italic</span> ;
+            }
+
+    </div>
+</code>
+</pre>
+                    
+                    </div>
+                    <div class="row">
+                        <a href="../stuff-introduction/css-exam-universal.html">universal selector example</a>
+                    </div>
+                    <div class="row">&nbsp;</div>
+                </div>
+            </article>
         </section>
 
     </main>
