@@ -29,12 +29,18 @@
 
                 <div class="row">
                     <h3>Structure</h3>
+                    <h6><u>CSS code</u></h6>
                     <pre><code>
     <span class="css-selector">.message</span><span class="css-symbol">&lbrace;</span>
         <span class="css-attribute">font-family</span> : <span class="css-value">Kanit</span> ;
         <span class="css-attribute">font-size</span> : <span class="css-const-value">16px</span> ;
         <span class="css-attribute">font-weight</span> : <span class="css-value">bold</span> ;
+        <span class="css-attribute">font-style</span> : <span class="css-value">italic</span> ;
     <span class="css-symbol">&rbrace;</span>
+                    </code></pre>
+                    <h6><u>Output</u></h6>
+                    <pre><code>
+    <span style="font-family:Kanit;font-size:16px;font-weight:bold;font-style:italic;">MethxMaster</span>
                     </code></pre>
                 </div>
 
@@ -51,6 +57,7 @@
             <div class="row">
                 To work with font we can set font style, size weight and color as list below.
                 <ul>
+                    <!--1.Font family-->
                     <li>
                         <p>
                             <b>font-family</b>
@@ -68,14 +75,19 @@
                             <a href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a><br>
                             In case you would like to use google font you can follow this 
                             <a href="../stuff-font/css-exam-font.html">instruction.</a>
-                            
+                            <h6><u>Here is an example</u></h6>
+                            <pre><code>
+    <span style="font-family:Kanit;">MethxMaster</span>
+                            </code></pre>
                         </p>
                     </li>
+
+                    <!--2.Font size-->
                     <li>
                         <p>
-                            <b>font-size</b> There are 2 ways to set font size.
+                            <b>font-size</b> define size of font (default = 16px) there are 2 ways to set font size.
                             <ol>
-                                <li>Set by <mark><u>const value</u></mark>
+                                <li>Set by <mark><u>const value</u></mark> ex. x-small, small, normal, large, ...
                                     <pre><code>
     <span class="css-selector">.message</span><span class="css-symbol">&lbrace;</span>
         <span class="css-attribute">font-size</span> : <span class="css-value">x-large</span> ;
@@ -92,27 +104,43 @@
                             </ol>
                         </p>
                     </li>
+
+                    <!--3.Font weight-->
                     <li>
                         <p>
-                            <b>font-weight</b>
+                            <b>font-weight</b> define thickness of font. there are 2 ways to set font-weight
                             <ol>
-                                <li>Set by <mark><u>const value</u></mark>
+                                <li>Set by <mark><u>const value</u></mark> ex. lighter, bold, bolder, ...
                                     <pre><code>
     <span class="css-selector">.message</span><span class="css-symbol">&lbrace;</span>
-        <span class="css-attribute">font-size</span> : <span class="css-value">x-large</span> ;
+        <span class="css-attribute">font-weight</span> : <span class="css-value">bolder</span> ;
     <span class="css-symbol">&rbrace;</span>
                                     </code></pre>
                                 </li>
-                                <li>Set by <mark><u>number value</u></mark>
+                                <li>Set by <mark><u>number value</u></mark> ex. 100, 200, ... , 900
                                     <pre><code>
     <span class="css-selector">.message</span><span class="css-symbol">&lbrace;</span>
-        <span class="css-attribute">font-size</span> : <span class="css-const-value">16px</span> ;
+        <span class="css-attribute">font-weight</span> : <span class="css-const-value">200</span> ;
     <span class="css-symbol">&rbrace;</span>
                                     </code></pre>
                                 </li>
                             </ol>
                         </p>
                     </li>
+
+                    <!--4.Font style-->
+                    <li>
+                        <p>
+                            <b>font-style</b> define style of font. ex. italic, normal, oblique, inherit, ...
+                            <pre><code>
+    <span class="css-selector">.message</span><span class="css-symbol">&lbrace;</span>
+        <span class="css-attribute">font-style</span> : <span class="css-value">italic</span> ;
+    <span class="css-symbol">&rbrace;</span>
+                            </code></pre>
+                               
+                        </p>
+                    </li>
+
                 </ul>
             </div>
 

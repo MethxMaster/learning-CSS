@@ -26,6 +26,14 @@
 .css-symbol{
     color:#FFE50C;
 }
+.css-import{
+    color:#C989C7;
+}
+.css-url{
+    color:#E7E4AA;
+}
+
+
 
 pre{
     background-color: #1F1F1F;

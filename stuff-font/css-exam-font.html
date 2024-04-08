@@ -10,6 +10,7 @@
 
     <!-- local css -->
     <link rel="stylesheet" href="../default.css">
+    <link rel="stylesheet" href="../exam-code.css">
     <link rel="stylesheet" href="../css/example-introduction.css">
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -50,8 +51,99 @@
                     </li>
                     <hr>
                     <li>
-                        <p>You will see the page as picture below then look for this get code button and click it</p>
-                        <img src="../stuff-font/img/exam-get-font.png" alt="google font home page" width="100%" height="100%">
+                        After that you choose way how to grab font code
+                        <ol type="A">
+                            <li>
+                                <p>
+                                    Reference link to the HTML file.<br>
+                                    Firstly, grab code from the internet.
+                                    <br><br>
+                                    <img src="../stuff-font/img/exam-link.png" alt="" width="100%" height="100%">
+                                    <br><br>
+                                </p>
+                                <p>
+                                    Then, paste code to the HTML file at element <mark>&lt;head&gt;&lt;/head&gt;</mark> and
+                                    create embed style <mark>&lt;style&gt;&lt;/style&gt;</mark>
+                                </p>
+                                
+                                <pre><code>
+    <span class="html-symbol">&lt;!</span><span class="html-syntax">DOCTYPE </span><span class="html-attribute">html</span><span class="html-symbol">&gt;</span>                       
+    <span class="html-symbol">&lt;</span><span class="html-syntax">html</span><span class="html-symbol">&gt;</span>
+        <span class="html-symbol">&lt;</span><span class="html-syntax">head</span><span class="html-symbol">&gt;</span>
+    
+            <span class="html-symbol">&lt;</span><span class="html-syntax">title</span><span class="html-symbol">&gt;</span>Title<span class="html-symbol">&lt;/</span><span class="html-syntax">title</span><span class="html-symbol">&gt;</span>
+
+            <span class="html-symbol">&lt;</span><span class="html-syntax">link </span><span class="html-attribute">rel</span>=<span class="html-attribute-value">"preconnect" </span><span class="html-attribute">href</span>=<span class="html-attribute-value">"https://fonts.googleapis.com"</span><span class="html-symbol">&gt;</span>
+            <span class="html-symbol">&lt;</span><span class="html-syntax">link </span><span class="html-attribute">rel</span>=<span class="html-attribute-value">"preconnect" </span><span class="html-attribute">href</span>=<span class="html-attribute-value">"https://fonts.gstatic.com" </span><span class="html-attribute">crossorigin</span><span class="html-symbol">&gt;</span>
+            <span class="html-symbol">&lt;</span><span class="html-syntax">link </span><span class="html-attribute">rel</span>=<span class="html-attribute-value">"https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;
+            0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;
+            1,700;1,800;1,900&display=swap" </span><span class="html-attribute">rel</span>=<span class="html-attribute-value">"stylesheet"</span><span class="html-symbol">&gt;</span>
+
+            <span class="html-symbol">&lt;</span><span class="html-syntax">style</span><span class="html-symbol">&gt;</span>
+
+                <span class="css-selector">.message</span><span class="css-symbol">&lbrace;</span>
+                    <span class="css-attribute">font-family</span> : <span class="css-value">Kanit</span> ;
+                <span class="css-symbol">&rbrace;</span>
+
+            <span class="html-symbol">&lt;/</span><span class="html-syntax">style</span><span class="html-symbol">&gt;</span>
+
+        <span class="html-symbol">&lt;/</span><span class="html-syntax">head</span><span class="html-symbol">&gt;</span>
+        <span class="html-symbol">&lt;</span><span class="html-syntax">body</span><span class="html-symbol">&gt;</span>
+                
+            <span class="html-symbol">&lt;</span><span class="html-syntax">p </span><span class="html-attribute">class</span>=<span class="html-attribute-value">"message"</span><span class="html-symbol">&gt;</span>MethxMaster<span class="html-symbol">&lt;/</span><span class="html-syntax">p</span><span class="html-symbol">&gt;</span>
+
+        <span class="html-symbol">&lt;/</span><span class="html-syntax">body</span><span class="html-symbol">&gt;</span>
+    <span class="html-symbol">&lt;/</span><span class="html-syntax">html</span><span class="html-symbol">&gt;</span>
+                                </code></pre>
+
+                                <p>the output will be like</p>
+                                <pre><code>
+    <span style="font-family:Kanit;">MethxMaster</span>
+                                </code></pre>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>
+                                    Import <mark><u>google font link</u></mark> to the CSS file<br>
+                                    Firstly, grab code from the internet.
+                                    <br><br>
+                                    <img src="../stuff-font/img/exam-import.png" alt="" width="100%" height="100%">
+                                    <br><br>
+                                    Then, paste code to the HTML file at element <mark>&lt;head&gt;&lt;/head&gt;</mark> and
+                                    create embed style <mark>&lt;style&gt;&lt;/style&gt;</mark>
+                                </p>
+                                <p>Create CSS file and import to the head of CSS file and then create the selector</p>
+                                <pre><code>
+    <span class="css-import">@import </span><span class="css-url">url</span><span class="css-symbol">(</span><span class="css-value">'https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'</span><span class="css-symbol">)    </span>
+
+    <span class="css-selector">.message</span><span class="css-symbol">&lbrace;</span>
+        <span class="css-attribute">font-family</span> : <span class="css-value">Kanit</span> ;
+    <span class="css-symbol">&rbrace;</span>
+                                </code></pre>
+                                <p>then reference this CSS file that we created to HTML file</p>
+                                <pre><code>
+    <span class="html-symbol">&lt;!</span><span class="html-syntax">DOCTYPE </span><span class="html-attribute">html</span><span class="html-symbol">&gt;</span>                       
+    <span class="html-symbol">&lt;</span><span class="html-syntax">html</span><span class="html-symbol">&gt;</span>
+        <span class="html-symbol">&lt;</span><span class="html-syntax">head</span><span class="html-symbol">&gt;</span>
+    
+            <span class="html-symbol">&lt;</span><span class="html-syntax">title</span><span class="html-symbol">&gt;</span>Title<span class="html-symbol">&lt;/</span><span class="html-syntax">title</span><span class="html-symbol">&gt;</span>
+
+            <span class="html-symbol">&lt;</span><span class="html-syntax">link </span><span class="html-attribute">rel</span>=<span class="html-attribute-value">"stylesheet" </span><span class="html-attribute">href</span>=<span class="html-attribute-value">"style.css"</span><span class="html-symbol">&gt;</span>
+
+        <span class="html-symbol">&lt;/</span><span class="html-syntax">head</span><span class="html-symbol">&gt;</span>
+        <span class="html-symbol">&lt;</span><span class="html-syntax">body</span><span class="html-symbol">&gt;</span>
+                
+            <span class="html-symbol">&lt;</span><span class="html-syntax">p </span><span class="html-attribute">class</span>=<span class="html-attribute-value">"message"</span><span class="html-symbol">&gt;</span>MethxMaster<span class="html-symbol">&lt;/</span><span class="html-syntax">p</span><span class="html-symbol">&gt;</span>
+
+        <span class="html-symbol">&lt;/</span><span class="html-syntax">body</span><span class="html-symbol">&gt;</span>
+    <span class="html-symbol">&lt;/</span><span class="html-syntax">html</span><span class="html-symbol">&gt;</span>
+                                </code></pre>
+                                <p>the output will be like</p>
+                                <pre><code>
+    <span style="font-family:Kanit;">MethxMaster</span>
+                                </code></pre>
+                            </li>
+                        </ol>
                     </li>
                 </ol>
             </article>
@@ -60,6 +152,7 @@
         
 
     </main>
+
 
 
     <footer class="footer center-element">
