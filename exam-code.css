@@ -1,0 +1,33 @@
+.html-symbol{
+    color:#68685A;
+}
+.html-syntax{
+    color:#559AD3;
+}
+.html-attribute{
+    color:#A2E6FF;
+}
+.html-attribute-value{
+    color:#D6977A;
+}
+
+.css-selector{
+    color:#CEB37B;
+}
+.css-attribute{
+    color:#A2E6FF;
+}
+.css-const-value{
+    color:#BFD5A7;
+}
+.css-value{
+    color:#D6977A;
+}
+.css-symbol{
+    color:#FFE50C;
+}
+
+pre{
+    background-color: #1F1F1F;
+    color:white;
+}
