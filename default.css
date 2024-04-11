@@ -23,3 +23,11 @@
     color: white
 }
 
+ol li a{
+  text-decoration :none;
+}
+a:hover{
+  text-decoration :none;
+  background:yellow;
+  color:red;
+}
