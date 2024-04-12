@@ -14,24 +14,340 @@
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+
+    <style>
+        .exam-code{
+            border:2px solid black
+        }
+        .output-case11{
+            border:2px solid black
+        }
+        ul#real-header{
+            background-color: rgb(55, 255, 109);
+            display: flex;
+        }
+        ul#real-header li{
+            display: flex;
+        }
+        ul#real-header li a{
+            padding: 15px;
+        }
+        ul#real-header li a:link{
+            color: black;
+            text-decoration: none;
+        }
+        ul#real-header li a:hover{
+            text-decoration: none;
+            background-color: rgb(149, 255, 177);
+        }
+        ul#real-header li a:visited{
+            color: black;
+            text-decoration: none;
+        }
+        ul#real-header li a :active{
+            text-decoration: none;
+            color:white;
+        }
+
+        .box-inline{
+            /*width: 30%;*/
+            box-sizing: border-box;
+            display: inline;
+            border: 1px solid green;
+            background-color: yellow;
+        }
+        .box-block{
+            width: 30%;
+            box-sizing: border-box;
+            display: block;
+            border: 1px solid green;
+            background-color: yellow;
+        }
+        .box-inline-block{
+            width: 30%;
+            box-sizing: border-box;
+            display: inline-block;
+            border: 1px solid green;
+            background-color: yellow;
+        }
+
+        ul#exam-inline{
+            color:black;
+            background-color:orange;
+            border:3px solid greenyellow;
+        }
+        ul#exam-inline li{
+            display:inline;
+            border:2px solid rgb(71, 163, 255);
+        }
+        ul#exam-inline li a{
+            padding: 20px;
+            padding-left: 50px;
+            border:1px solid red
+        }
+
+    </style>
 </head>
 
-<body>
 
+
+<body>
     <header class="header center-element">
         <h1 style="color:white;">Inline-block</h1>
     </header>
-    <div id="test1">
-
-    </div>
-    <div id="test2">
-
-    </div>
 
     <main>
         <section>
+            <ul id="real-header">
+                <li><a href="#">Home</a></li>
+                <li><a href="#inline-case">Inline</a></li>
+                <li><a href="#block-case">Block</a></li>
+                <li><a href="#inline-block-case">Inline-block</a></li>
+            </ul>
+            <hr>
+            <!-- case1 -->
+            <article id="inline-case">
+                <h1><mark>Inline case1</mark></h1>
+                <div class="container">
+                    <h3><u>Input</u></h3>
+                </div>
+                <div class="exam-code bgcode container">
+                    <pre><code>
+    &lt;style&gt;
+        ul#exam-inline{
+            color: black;
+            background-color: <span style="color:orange;">orange</span>;
+            border: 3px solid <span style="color:greenyellow;">greenyellow</span>;
+        }
+        ul#exam-inline li{
+            display: <span style="color:red;background-color:yellow">inline</span>;
+            border: 2px solid <span style="color:rgb(71, 163, 255);">blue</span>;
+        }
+        ul#exam-inline li a{
+            padding: 20px;
+            padding-left: 50px;
+            border: 1px solid <span style="color:red;">red</span>;
+        }
+    &lt;/style&gt;
+----------------------------------------
+    &lt;body&gt;
+        &lt;ul id=&quot;exam-inline&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;title 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;title 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;title 3&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+                    </code></pre>
+                </div>
+                <br>
+                <div class="container">
+                    <h3><u>Output</u></h3>
+                </div>
+                <div class="output-case11 container">
+                    <ul id="exam-inline">
+                        <li><a href="#">title 1</a></li>
+                        <li><a href="#">title 2</a></li>
+                        <li><a href="#">title 3</a></li>
+                    </ul>
+                </div>
+            </article>
+            <br><br>
+            <article id="inline-case">
+                <h1><mark>Inline case2</mark></h1>
+                <div class="container">
+                    <h3><u>Input</u></h3>
+                </div>
+                <div class="exam-code bgcode container">
+                    <pre><code>
+    &lt;style&gt;
+        .box-inline{
+            /*width: 30%;*/         <span style="color:red;background-color: yellow;">This isn't working because "div" is the block</span>
+            box-sizing: border-box;
+            display: <span style=color:yellow>inline</span>;
+            border: 1px solid green;
+            background-color: yellow;
+        }
+    &lt;/style&gt;
+                    </code></pre>
+                </div>
+                <br>
+                <div class="container">
+                    <h3><u>Output</u></h3>
+                </div>
+                <div class="output-case11 container">
+                    <div class="box-inline">
+                        <h1>home</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Ipsum ipsa sint quae molestiae cum fugiat, quis, inventore
+                            facere enim voluptate perspiciatis suscipit molestias
+                            neque sit laudantium laboriosam. Provident, eveniet. 
+                            Vel tenetur voluptatum odit quisquam minus magnam dolor 
+                            molestiae maiores sit! Nemo harum reiciendis quaerat
+                            voluptatum placeat ad rerum sint accusantium?
+                        </p>
+                    </div>
+                    <div class="box-inline">
+                        <h1>home</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Ipsum ipsa sint quae molestiae cum fugiat, quis, inventore
+                            facere enim voluptate perspiciatis suscipit molestias
+                            neque sit laudantium laboriosam. Provident, eveniet. 
+                            Vel tenetur voluptatum odit quisquam minus magnam dolor 
+                            molestiae maiores sit! Nemo harum reiciendis quaerat
+                            voluptatum placeat ad rerum sint accusantium?
+                        </p>
+                    </div>
+                    <div class="box-inline">
+                        <h1>home</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Ipsum ipsa sint quae molestiae cum fugiat, quis, inventore
+                            facere enim voluptate perspiciatis suscipit molestias
+                            neque sit laudantium laboriosam. Provident, eveniet. 
+                            Vel tenetur voluptatum odit quisquam minus magnam dolor 
+                            molestiae maiores sit! Nemo harum reiciendis quaerat
+                            voluptatum placeat ad rerum sint accusantium?
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <br>
+            <hr>
+
+            <!-- case2 -->
+            <article id="block-case">
+                <h1><mark>Block case</mark></h1>
+                <div class="container">
+                    <h3><u>Input</u></h3>
+                </div>
+                <div class="exam-code bgcode container">
+                    <pre><code>
+    &lt;style&gt;
+        .box-block{
+            width: 30%;
+            box-sizing: border-box;
+            display: <span style=color:yellow>block</span>;
+            border: 1px solid green;
+            background-color: yellow;
+        }
+    &lt;/style&gt;
+                    </code></pre>
+                </div>
+                <br>
+                <div class="container">
+                    <h3><u>Output</u></h3>
+                </div>
+                <div class="output-case11 container">
+                    <div class="box-block">
+                        <h1>home</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Ipsum ipsa sint quae molestiae cum fugiat, quis, inventore
+                            facere enim voluptate perspiciatis suscipit molestias
+                            neque sit laudantium laboriosam. Provident, eveniet. 
+                            Vel tenetur voluptatum odit quisquam minus magnam dolor 
+                            molestiae maiores sit! Nemo harum reiciendis quaerat
+                            voluptatum placeat ad rerum sint accusantium?
+                        </p>
+                    </div>
+                    <div class="box-block">
+                        <h1>home</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Ipsum ipsa sint quae molestiae cum fugiat, quis, inventore
+                            facere enim voluptate perspiciatis suscipit molestias
+                            neque sit laudantium laboriosam. Provident, eveniet. 
+                            Vel tenetur voluptatum odit quisquam minus magnam dolor 
+                            molestiae maiores sit! Nemo harum reiciendis quaerat
+                            voluptatum placeat ad rerum sint accusantium?
+                        </p>
+                    </div>
+                    <div class="box-block">
+                        <h1>home</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Ipsum ipsa sint quae molestiae cum fugiat, quis, inventore
+                            facere enim voluptate perspiciatis suscipit molestias
+                            neque sit laudantium laboriosam. Provident, eveniet. 
+                            Vel tenetur voluptatum odit quisquam minus magnam dolor 
+                            molestiae maiores sit! Nemo harum reiciendis quaerat
+                            voluptatum placeat ad rerum sint accusantium?
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <br>
+            <hr>
+
+            <!-- case3 -->
+            <article id="inline-block-case">
+                <h1><mark>Inline-block case</mark></h1>
+                <div class="container">
+                    <h3><u>Input</u></h3>
+                </div>
+                <div class="exam-code bgcode container">
+                    <pre><code>
+    &lt;style&gt;
+        .box-inline-block{
+            width: 30%;
+            box-sizing: border-box;
+            display: <span style=color:yellow>inline-block</span>;
+            border: 1px solid green;
+            background-color: yellow;
+        }
+    &lt;/style&gt;
+                    </code></pre>
+                </div>
+                <br>
+                <div class="container">
+                    <h3><u>Output</u></h3>
+                </div>
+                <div class="output-case11 container">
+                    <div class="box-inline-block">
+                        <h1>home</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Ipsum ipsa sint quae molestiae cum fugiat, quis, inventore
+                            facere enim voluptate perspiciatis suscipit molestias
+                            neque sit laudantium laboriosam. Provident, eveniet. 
+                            Vel tenetur voluptatum odit quisquam minus magnam dolor 
+                            molestiae maiores sit! Nemo harum reiciendis quaerat
+                            voluptatum placeat ad rerum sint accusantium?
+                        </p>
+                    </div>
+                    <div class="box-inline-block">
+                        <h1>home</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Ipsum ipsa sint quae molestiae cum fugiat, quis, inventore
+                            facere enim voluptate perspiciatis suscipit molestias
+                            neque sit laudantium laboriosam. Provident, eveniet. 
+                            Vel tenetur voluptatum odit quisquam minus magnam dolor 
+                            molestiae maiores sit! Nemo harum reiciendis quaerat
+                            voluptatum placeat ad rerum sint accusantium?
+                        </p>
+                    </div>
+                    <div class="box-inline-block">
+                        <h1>home</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Ipsum ipsa sint quae molestiae cum fugiat, quis, inventore
+                            facere enim voluptate perspiciatis suscipit molestias
+                            neque sit laudantium laboriosam. Provident, eveniet. 
+                            Vel tenetur voluptatum odit quisquam minus magnam dolor 
+                            molestiae maiores sit! Nemo harum reiciendis quaerat
+                            voluptatum placeat ad rerum sint accusantium?
+                        </p>
+                    </div>
+                </div>
+            </article>
 
         </section>
+        <hr>
     </main>
 
 
