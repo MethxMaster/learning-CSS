@@ -10,6 +10,7 @@
 
     <!-- local css -->
     <link rel="stylesheet" href="../default.css">
+    <link rel="stylesheet" href="../exam-code.css">
     <link rel="stylesheet" href="../css/example-introduction.css">
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -21,16 +22,38 @@
     <header class="header center-element">
         <h1 style="color:white;">Block shadow</h1>
     </header>
-    <div id="test1">
-
-    </div>
-    <div id="test2">
-
-    </div>
 
     <main>
         <section>
+            <h1>Introduction</h1>
+            <p>This is structure of the <strong><mark>"box-shadow"</mark></strong></p>
+            <div>
+                <pre><code>
+    <mark><b><u>Sturcture</u></b></mark>
+    <span class="css-attribute">box-shadow</span>: <span class="css-const-value">x y blur spread color</span>;
 
+    <mark><b><u>Example</u></b></mark>
+    <span class="css-attribute">box-shadow</span>: <span class="css-const-value">5px 5px 10px 5px gray</span>;
+                </code></pre>
+            </div>
+            <p>
+                More explanation,
+                <ul>
+                    <li><b>x</b> is shadow position (+ is right, - is left)</li>
+                    <li><b>y</b> is shadow position (+ is bottom, - is top)</li>
+                    <li><b>blur</b> is blur of shadow</li>
+                    <li><b>spread</b> is size of the shadow</li>
+                    <li><b>color</b> is color of the shadow
+                </ul>
+            </p>
+            <h1>Output</h1>
+            <div style="border: 5px solid gray;height:200px">
+                <div id="case1" style="background-color: aqua; width:100px;height:100px;box-shadow: 5px 5px 10px 5px gray;"></div>
+            </div>
+            <hr>
+            
+                
+            
         </section>
     </main>
 
