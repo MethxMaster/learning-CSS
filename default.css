@@ -31,3 +31,6 @@ ol li a:hover{
   background:yellow;
   color:red;
 }
+.exam-output{
+  border:2px solid black
+}
