@@ -1,11 +1,37 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  /*font-family: Arial, sans-serif;*/
+  margin: 0;
+  padding: 0;
+}
+main{
+  padding: 10px;
+  margin-top: 100px;
+}
+
+
+header{
+  background-color: black;
+  color: white;
+
+  text-align: center; /* Centers horizontally */
+
+  padding: 10px 20px;
+  width: 100%;
+
+  position: fixed; /* This makes the header fixed */
+  top: 0;           /* Aligns the header to the top */
+  z-index: 1000;    /* Ensures the header stays on top of other elements */
+}
+
 .center-element{
   
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
 }
-
-
   .header{
     background-color: black;
     border:20px solid black;

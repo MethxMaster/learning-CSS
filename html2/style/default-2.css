@@ -1,7 +1,32 @@
-main{
+*{
     box-sizing: border-box;
-    margin: 10px;
 }
+body {
+    /*font-family: Arial, sans-serif;*/
+    margin: 0;
+    padding: 0;
+}
+main{
+    padding: 10px;
+    margin-top: 120px;
+}
+
+
+header{
+    background-color: black;
+    color: white;
+    border:20px solid black;
+
+    text-align: center; /* Centers horizontally */
+
+    padding: 10px 20px;
+    width: 100%;
+
+    position: fixed; /* This makes the header fixed */
+    top: 0;           /* Aligns the header to the top */
+    z-index: 1000;    /* Ensures the header stays on top of other elements */
+}
+
 #code-lesson{
     display:flex;
 }
@@ -58,8 +83,6 @@ main{
 .css-url{
     color:#E7E4AA;
 }
-
-
 
 pre{
     background-color: #1F1F1F;
