@@ -1,0 +1,67 @@
+main{
+    box-sizing: border-box;
+    margin: 10px;
+}
+#code-lesson{
+    display:flex;
+}
+#code-part{
+    width: 50vw;
+}
+#output-part{
+    width: 50vw;
+}
+
+@media (max-width:500px){
+    #code-lesson{
+        display:block;
+    }
+    #code-part{
+        width: 100vw;
+    }
+    #output-part{
+        width: 100vw;
+    }
+}
+
+.html-symbol{
+    color:#68685A;
+}
+.html-syntax{
+    color:#559AD3;
+}
+.html-attribute{
+    color:#A2E6FF;
+}
+.html-attribute-value{
+    color:#D6977A;
+}
+
+.css-selector{
+    color:#CEB37B;
+}
+.css-attribute{
+    color:#A2E6FF;
+}
+.css-const-value{
+    color:#BFD5A7;
+}
+.css-value{
+    color:#D6977A;
+}
+.css-symbol{
+    color:#FFE50C;
+}
+.css-import{
+    color:#C989C7;
+}
+.css-url{
+    color:#E7E4AA;
+}
+
+
+
+pre{
+    background-color: #1F1F1F;
+    color:white;
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- meta declaration -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Web Design</title>
+
+    <!-- local css -->
+    <link rel="stylesheet" href="../default.css">
+    <link rel="stylesheet" href="style/default-2.css">
+    <link rel="stylesheet" href="../css/example-introduction.css">
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        
+    </style>
+
+</head>
+
+    <body>
+
+        <header class="header center-element">
+            <h1 style="color:white;">Responsive Web Design</h1>
+        </header>
+
+        <main>
+            <!-- Introduction -->
+            <section>
+
+                <!-- intro -->
+                <article>
+                    <h1>Introduction</h1>
+                    <p>
+                        It is a design for multi device. Devices has differnce screen size
+                        so the problem comes when you access diffent device. for example ->
+                        some content is be disabled
+                    </p>
+                </article>
+                <br>
+
+                <!-- table screen size -->
+                <article>
+                    <h6><u>Resolution of device screen</u></h6>
+                    <div style="min-width:300;max-width:1000px;">
+                        <table class="table">
+                            <thead class="table-success">
+                                <th>
+                                    Device
+                                </th>
+                                <th>
+                                    Resolution
+                                </th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        Mobile devices
+                                    </th>
+                                    <td>
+                                        320 - 480 pixels
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        iPads, Tablets
+                                    </th>
+                                    <td>
+                                        481 - 768 pixels
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Labtops
+                                    </th>
+                                    <td>
+                                        769 - 1024 pixels
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Desktops
+                                    </th>
+                                    <td>
+                                        1025 - 1200 pixels
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        TV, Widescreen
+                                    </th>
+                                    <td>
+                                        1201+ pixels
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+                <br>
+
+                <!-- meta tag -->
+                <article>
+                    <h6><u>Meta tag</u></h6>
+                    <p>
+                        First thing that you need to do when you want to implement the responsive web page.
+                        You must decalre <mark><b>meta</b></mark> tag like example below.
+                        <div class="bgcode" style="min-width:300;max-width:1000px;">
+                            <pre><code>
+    <span class="html-symbol">&lt;</span><span class="html-syntax">meta </span><span class="html-attribute">name</span>=<span class="html-attribute-value">"viewport" </span><span class="html-attribute">content</span>=<span class="html-attribute-value">"width=device-width, initial-scale=1.0"</span><span class="html-symbol">&gt;</span>
+                            </code></pre>
+                        </div>
+                    </p>
+                </article>
+                <br>
+
+                <!-- media query -->
+                <article>
+                    <h6><u>Media Query</u></h6>
+                    <p>
+                        <b>Media Query</b> is style format to display output depends sizing of device's screen.
+                    </p>
+                    <div class="bgcode" style="min-width:300;max-width:1000px;">
+                        <pre><code>
+    <span style="color:white;"><i><u><b>Concept</b></u></i></span>
+
+    <span class="css-import">@media</span> <span class="css-symbol">(</span><span class="css-const-value">screen size</span><span class="css-symbol">){</span>
+        ... style ...
+    <span class="css-symbol">}</span>
+
+    --------------------------
+    <span style="color:white;"><i><u><b>code example</b></u></i></span>
+    
+    <span style="color:green">/* smartphone size */</span>
+    <span class="css-import">@media</span> only <span class="css-value">screen</span> and <span class="css-symbol">(</span><span class="css-attribute">max-width</span>:<span class="css-const-value">500px</span><span class="css-symbol">){</span>
+        <span class="css-selector">#introduction</span><span class="css-import">{</span>
+            <span class="css-attribute">width</span>: <span class="css-const-value">100vw</span>;
+        <span class="css-import">}</span>
+    <span class="css-symbol">}</span>
+
+    <span style="color:green">/* iPad size */</span>
+    <span class="css-import">@media</span> <span class="css-symbol">(</span><span class="css-attribute">min-width</span>:<span class="css-const-value">501px</span><span class="css-symbol">)</span> and <span class="css-symbol">(</span><span class="css-attribute">max-width</span>:<span class="css-const-value">780px</span><span class="css-symbol">){</span>
+        <span class="css-selector">#introduction</span><span class="css-import">{</span>
+            <span class="css-attribute">width</span>: <span class="css-const-value">50vw</span>;
+        <span class="css-import">}</span>
+    <span class="css-symbol">}</span>
+                        </code></pre>
+
+                    </div>
+                </article>
+                <br>
+
+            </section>
+            <hr>
+
+            <!-- Example code -->
+            <section>
+                <h1>Example</h1>
+                <div id="code-lesson">
+                    <div id="code-part">
+                        <article class="container">
+                            <h3><u>code</u></h3>
+                            <div class="bgcode">
+                                <pre><code>
+    <span style="color:green;">/* default setting */</span>
+    body{
+        background-color: gray;
+        color:white;
+        text-align: center;
+        padding: 100px;
+    }
+    h1{
+        display: none;
+    }
+
+    <span style="color:green;">/* smartphone setting */</span>
+    <span style="color:pink;">@media</span> only screen and (<span style="color:yellow;">max-width:500px</span>){
+        body{
+            background-color: red;
+        }
+        #smartphone h1{
+            display: block;
+        }
+    }
+
+    <span style="color:green;">/* tablet, ipad setting */</span>
+    <span style="color:pink;">@media</span> (<span style="color:yellow;">min-width:501px</span>) and (<span style="color:yellow;">max-width:768px</span>){
+        body{
+            background-color: blue;
+        }
+        #tablets h1{
+            display: block;
+        }
+    }
+
+    <span style="color:green;">/* desktop setting */</span>
+    <span style="color:pink;">@media</span> (<span style="color:yellow;">min-width:769px</span>) and (<span style="color:yellow;">max-width:1200px</span>){
+        body{
+            background-color: green;
+        }
+        #normal h1{
+            display: block;
+        }
+    }
+
+    <span style="color:green;">/* widescreen setting */</span>
+    <span style="color:pink;">@media</span> (<span style="color:yellow;">min-width:1201px</span>){
+        body{
+            background-color: black;
+        }
+        #widescreen h1{
+            display: block;
+        }
+    }
+                                </code></pre>
+                            </div>
+                        </article>
+                    </div>
+                    <div id="output-part">
+                        <article class="container">
+                            <h3><u>output</u></h3>
+                            Check output in this link. 
+                            <a href="exam-responsive.html" target="_blank">Output</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <hr>
+
+        <footer class="footer center-element">
+            <a href="../index.html">
+                <img src="../source/img/home.png" alt="" width="50px" height="50px">
+            </a>
+        </footer>
+
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    </body>
+</html>
