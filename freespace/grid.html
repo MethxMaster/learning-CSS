@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        /*
+        .grid-container{
+            display: grid;
+
+            
+            grid-template-columns: 15vw 70vw 15vw;
+            grid-template-rows: repeat(3,auto);
+
+            
+            
+            grid-template-rows: repeat(3,1fr);
+            grid-template-columns: 1fr 2fr 1fr;
+            
+            
+        }
+        */
+        .item{
+            padding: 3rem;
+            border: 1px solid white;
+            background-color: orange;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        .item:first-child{
+
+            /* Reference by border line
+            grid-column-start: 1;
+            grid-column-end: 4;
+            */
+            /*grid-column: 1/4 ;*/
+
+            /*
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            */
+
+            /* Refferemce by size of grid
+            grid-row: 1/span 3;
+            grid-column: 2/span 2;
+            */
+            
+        }
+        .item:last-child{
+            /*grid-row: 1/4*/
+        }
+
+
+        .header-item{
+            background-color: greenyellow;
+            grid-area: header;
+        }
+        .content-item{
+            background-color: orange;
+            grid-area: content;
+        }
+        .footer-item{
+            background-color: black;
+            color: white;
+            grid-area: footer;
+        }
+        .sidebar-item{
+            background-color: pink;
+            grid-area: sidebar;
+        }
+        .grid-container{
+            display: grid;
+            /*
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 1fr 5fr 1fr;
+
+            grid-template-areas:
+            'header header'
+            'sidebar content'
+            'footer footer'
+            ;
+            */
+
+            grid-template:
+            'header header' 2fr
+            'sidebar content' 20fr
+            'footer footer' 2fr
+            /1fr 4fr;
+
+        }
+        .sub-item{
+            background-color: aqua;
+            border: 1px solid red;
+            border-radius: 5px;
+            padding: 5px;
+
+        }
+        .flex-container{
+            display: flex;
+        }
+
+        .sub1{
+            flex: 1;
+        }
+        .sub2{
+            flex: 4;
+        }
+        .sub3{
+            flex: 1;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="header-item">Header</div>
+        <div class="content-item">
+            Content
+
+            <div class="flex-container">
+                <div class="sub-item sub1">sub-item1</div>
+                <div class="sub-item sub2">sub-item2</div>
+                <div class="sub-item sub3">sub-item3</div>
+            </div>
+            
+        </div>
+        <div class="footer-item">Footer</div>
+        <div class="sidebar-item">Sidebars</div>
+
+    </div>
+    
+</body>
+</html>

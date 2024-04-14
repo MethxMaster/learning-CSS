@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            background-color: orange;
+        }
+
+        /* Target selector -----------------------------------*/
+
+        /* descendant selector*/
+        div p{
+            background-color: greenyellow;
+        }
+
+        /* child selector*/
+        div>p{
+            background-color: yellow;
+        }
+        /*-----------------------------------------------------*/
+
+
+        a{
+            color: black;
+        }
+
+        /* Style by attribute ---------------------------------*/
+        a[target]{
+            background-color: orange;
+        }
+
+        a[target='_blank']{
+            background-color: red;
+            color: white;
+        }
+        /*-----------------------------------------------------*/
+
+
+
+        /* Special selector -----------------------------------*/
+        input[type="email"] , input[type="text"]{
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        input[type="submit"]{
+            background-color: aqua;
+            color:black;
+            border-radius: 5px;
+        }
+        /*-----------------------------------------------------*/
+
+        /* Pseudo selector -----------------------------------*/
+        li{
+            list-style: none;
+            border: 1px solid black;
+        }
+        li:first-child{
+            background-color: purple;
+        }
+        li:nth-child(2){
+            background-color: blue;
+        }
+        li:nth-child(3){
+            background-color: green;
+        }
+        li:last-child{
+            background-color: red;
+        }
+        li:nth-last-child(2){
+            background-color: orange;
+        }
+        li:nth-child(3n+2){
+            color:red;
+        }
+        li:nth-child(even){
+            font-weight: bold;
+        }
+        /*-----------------------------------------------------*/
+
+        /* Before and After pseudo ----------------------------*/
+        .is-required::before{
+            content: "*";
+            color: red;
+            padding-left: 2px
+        }
+        /*-----------------------------------------------------*/
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, aliquid?</p>
+        <ul>
+            <li><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, voluptates.</p></li>
+            <li><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, voluptates.</p></li>
+            <li><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, voluptates.</p></li>
+        </ul>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, aliquid?</p>
+    </div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, aliquid?</p>
+
+    <br>
+
+    <a href="https://www.google.com" target="_self">google.com</a>
+    <a href="https://www.youtube.com" target="_blank">youtube.com</a>
+    <a href="https://www.facebook.com">facebook.com</a>
+
+    <br><br>
+
+        <form>
+            <input type="email" placeholder="e-mail">
+            <input type="text" placeholder="message">
+            <input type="submit" value="Submit">
+        </form>
+
+    <br><br>
+
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+        <li>item 6</li>
+        <li>item 7</li>
+        <li>item 8</li>
+        <li>item 9</li>
+        <li>item 10</li>
+    </ul>
+
+    <br><br>
+    <label for="strName" class="is-required">Name</label>
+    <input type="text" id="strName">
+
+    <a href="exam-before-after-pseudo.html">Another example Before/After Pseudo</a>
+
+
+</body>
+</html>
