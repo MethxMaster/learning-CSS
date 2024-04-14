@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        :root{
+            --box: 2px solid black;
+            --theme-color: orange;
+            --shadow: 5px 5px 5px var(--theme-color);
+            --spacing: 20px;
+            --font-color: white;
+            --font-size: 40px;
+            --shadow-black: var(--small-px) var(--small-px) var(--small-px) black;
+            --small-px: 5px;
+        }
+        div{
+            margin: var(--spacing);
+        }
+        .box1{
+            border: var(--box);
+            background-color: var(--theme-color);
+            box-shadow: var(--shadow);
+            font-size: var(--spacing);
+        }
+        .box2{
+            border: var(--box);
+            text-shadow: var(--shadow);
+            box-shadow: var(--shadow);
+        }
+        .box3{
+            border: var(--box);
+            background-color: var(--theme-color);
+            color: var(--font-color);
+            font-size: var(--font-size);
+            text-shadow: var(--shadow-black);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <h1>Title 1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, laudantium.</p>
+    </div>
+    <div class="box2">
+        <h1>Title 1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, laudantium.</p>
+    </div>
+    <div class="box3">
+        <h1>Title 1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, laudantium.</p>
+    </div>
+    <div>
+        <pre><code>
+    :root{
+        --box: 2px solid black;
+        --theme-color: orange;
+        --shadow: 5px 5px 5px var(--theme-color);
+        --spacing: 20px;
+        --font-color: white;
+        --font-size: 40px;
+        --shadow-black: var(--small-px) var(--small-px) var(--small-px) black;
+        --small-px: 5px;
+    }
+    div{
+        margin: var(--spacing);
+    }
+    .box1{
+        border: var(--box);
+        background-color: var(--theme-color);
+        box-shadow: var(--shadow);
+        font-size: var(--spacing);
+    }
+    .box2{
+        border: var(--box);
+        text-shadow: var(--shadow);
+        box-shadow: var(--shadow);
+    }
+    .box3{
+        border: var(--box);
+        background-color: var(--theme-color);
+        color: var(--font-color);
+        font-size: var(--font-size);
+        text-shadow: var(--shadow-black);
+    }
+        </code></pre>
+    </div>
+</body>
+</html>
